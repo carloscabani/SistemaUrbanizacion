@@ -1,0 +1,13 @@
+/*
+ * StyleSheet Principal
+ */
+
+#mainMenu Pane:hover{
+    -fx-background-color: #32ada3;
+}
+
+
+BorderPane{
+    -fx-background-color: #FAE5D3;
+    
+}

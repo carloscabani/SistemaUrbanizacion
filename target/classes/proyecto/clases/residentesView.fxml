@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane stylesheets="@../../styles/mainCSS.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.controllers.ResidentesController">
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="28.0" prefWidth="178.0" style="-fx-background-color: #7DE7BD;" stylesheets="@../../styles/mainCSS.css" text="Menú Principal">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="788.0" style="-fx-background-color: #99FFFC;" stylesheets="@../../styles/mainCSS.css" text="Vista Residentes" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox id="mainMenu" prefHeight="372.0" prefWidth="178.0" style="-fx-background-color: #99FFC6;" stylesheets="@../../styles/mainCSS.css" BorderPane.alignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <children>
+            <Pane fx:id="paneUrbanizacion" prefHeight="39.0" prefWidth="79.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="43.0" layoutY="-2.0" onMouseClicked="#goToUrbanizacion" prefHeight="44.0" prefWidth="132.0" text="Urbanización">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneColaborador">
+               <children>
+                  <Label alignment="CENTER" layoutX="37.0" layoutY="6.0" onMouseClicked="#goToColaboradores" prefHeight="43.0" prefWidth="143.0" text="Colaboradores">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneResidente" prefHeight="50.0" prefWidth="44.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="49.0" layoutY="1.0" onMouseClicked="#goToResidentes" prefHeight="49.0" prefWidth="127.0" text="Residentes">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneVisitante" prefHeight="50.0" prefWidth="22.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="48.0" onMouseClicked="#goToVisitantes" prefHeight="49.0" prefWidth="132.0" text="Visitantes">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="panePermiso">
+               <children>
+                  <Label alignment="CENTER" layoutX="33.0" onMouseClicked="#goToPermisos" prefHeight="49.0" prefWidth="145.0" text="Permisos de Entrada">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneRevision">
+               <children>
+                  <Label alignment="CENTER" layoutX="37.0" onMouseClicked="#goToRevision" prefHeight="49.0" prefWidth="143.0" text="Revisión de Entrada">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneReporte">
+               <children>
+                  <Label alignment="CENTER" layoutX="43.0" onMouseClicked="#goToReportes" prefHeight="49.0" prefWidth="137.0" text="Reportes">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneSalir">
+               <children>
+                  <Label alignment="CENTER" layoutX="54.0" onMouseClicked="#salir" prefHeight="30.0" prefWidth="126.0" text="Salir">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </left>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" />
+   </padding>
+   <center>
+      <TableView id="rightPane" fx:id="tableResidentes" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="362.0" prefWidth="786.0" stylesheets="@../../styles/rightPaneCSS.css" BorderPane.alignment="CENTER">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+</BorderPane>

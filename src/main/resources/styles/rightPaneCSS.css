@@ -1,0 +1,36 @@
+/* 
+    Author: Carlos Cabanilla
+*/
+.table-view .colum-header{
+    -fx-cell-size: 10;
+    -fx-background-color: #006b00;
+}
+.table-view .colum-header .label{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.button:hover{
+    -fx-background-color: #9e856f;
+    -fx-text-fill: white;
+}
+
+.combo-box:hover{
+    -fx-background-color: #9e856f;
+}
+
+TabPane .tab-header-area .tab-header-background {
+    -fx-background-color: #9e856f;
+}
+
+.tab {
+    -fx-background-color: #cbbaac;
+}
+
+.tab:hover {
+    -fx-background-color: #9e856f;
+}
+
+.tab-label:hover {
+    -fx-text-fill: white
+}

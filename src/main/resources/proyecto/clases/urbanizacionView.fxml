@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="410.0" prefWidth="985.0" stylesheets="@../../styles/mainCSS.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.controllers.UrbanizacionController">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" />
+   </padding>
+   <left>
+      <VBox id="mainMenu" prefHeight="372.0" prefWidth="176.0" style="-fx-background-color: #99FFC6;" stylesheets="@../../styles/mainCSS.css" BorderPane.alignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <children>
+            <Pane fx:id="paneUrbanizacion" prefHeight="39.0" prefWidth="79.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="43.0" layoutY="-2.0" onMouseClicked="#goToUrbanizacion" prefHeight="44.0" prefWidth="132.0" text="Urbanización">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneColaborador">
+               <children>
+                  <Label alignment="CENTER" layoutX="37.0" layoutY="6.0" onMouseClicked="#goToColaboradores" prefHeight="43.0" prefWidth="143.0" text="Colaboradores">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneResidente" prefHeight="50.0" prefWidth="44.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="49.0" layoutY="1.0" onMouseClicked="#goToResidentes" prefHeight="49.0" prefWidth="127.0" text="Residentes">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneVisitante" prefHeight="50.0" prefWidth="22.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="48.0" onMouseClicked="#goToVisitantes" prefHeight="49.0" prefWidth="132.0" text="Visitantes">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="panePermiso">
+               <children>
+                  <Label alignment="CENTER" layoutX="33.0" onMouseClicked="#goToPermisos" prefHeight="49.0" prefWidth="145.0" text="Permisos de Entrada">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneRevision">
+               <children>
+                  <Label alignment="CENTER" layoutX="37.0" onMouseClicked="#goToRevision" prefHeight="49.0" prefWidth="143.0" text="Revisión de Entrada">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneReporte">
+               <children>
+                  <Label alignment="CENTER" layoutX="43.0" onMouseClicked="#goToReportes" prefHeight="49.0" prefWidth="137.0" text="Reportes">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneSalir">
+               <children>
+                  <Label alignment="CENTER" layoutX="54.0" onMouseClicked="#salir" prefHeight="30.0" prefWidth="126.0" text="Salir">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox alignment="CENTER" prefHeight="372.0" prefWidth="762.0" stylesheets="@../../styles/rightPaneCSS.css" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane id="rightPane" alignment="CENTER" prefHeight="371.0" prefWidth="389.0" stylesheets="@../../styles/rightPaneCSS.css">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="207.0" minWidth="10.0" prefWidth="174.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="215.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Nombre">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label text="Etapa" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label text="Dirección" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label text="Administrador" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label text="Contacto Administración" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label text="Constructora" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Pane GridPane.columnIndex="1">
+                     <children>
+                        <TextField fx:id="txtNombre" blendMode="MULTIPLY" editable="false" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="365.0">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                     </children>
+                  </Pane>
+                  <Pane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <TextField fx:id="txtEtapa" blendMode="MULTIPLY" editable="false" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="365.0">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                     </children>
+                  </Pane>
+                  <Pane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <TextField fx:id="txtDireccion" blendMode="MULTIPLY" editable="false" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="365.0">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                     </children>
+                  </Pane>
+                  <Pane GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                        <Label fx:id="alertMessage" layoutY="44.0" />
+                        <TextField fx:id="txtContacto" blendMode="MULTIPLY" editable="false" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" onKeyPressed="#isCorreo" prefHeight="25.0" prefWidth="365.0">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                     </children>
+                  </Pane>
+                  <Pane GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <TextField fx:id="txtConstructora" blendMode="MULTIPLY" editable="false" layoutX="3.0" layoutY="13.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefWidth="365.0">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                     </children>
+                  </Pane>
+                  <Pane GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <children>
+                        <ComboBox fx:id="adminList" blendMode="MULTIPLY" layoutX="3.0" layoutY="14.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#selectOption" prefHeight="25.0" prefWidth="365.0" promptText="Administradores registrados" visible="false" visibleRowCount="5">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ComboBox>
+                        <TextField fx:id="txtAdmin" blendMode="MULTIPLY" editable="false" layoutX="3.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="365.0">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                     </children>
+                  </Pane>
+               </children>
+            </GridPane>
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" spacing="30.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="editar" alignment="CENTER" blendMode="MULTIPLY" contentDisplay="CENTER" mnemonicParsing="false" onAction="#editMode" prefHeight="25.0" prefWidth="100.0" text="Editar" textAlignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="cancelar" alignment="CENTER" blendMode="MULTIPLY" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancelar" prefHeight="25.0" prefWidth="100.0" text="Cancelar" textAlignment="CENTER" visible="false">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets left="15.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="guardar" alignment="CENTER" blendMode="MULTIPLY" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#guardar" prefHeight="25.0" prefWidth="100.0" text="Guardar">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets left="15.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets right="60.0" />
+         </padding>
+      </VBox>
+   </center>
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="28.0" prefWidth="178.0" style="-fx-background-color: #7DE7BD;" stylesheets="@../../styles/mainCSS.css" text="Menú Principal">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="rotulo" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="788.0" style="-fx-background-color: #99FFFC;" stylesheets="@../../styles/mainCSS.css" text="Vista Urbanización" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
